@@ -40,10 +40,6 @@ export function useDisplay() {
     showOverlay.value = !showOverlay.value
   }
 
-  function hideOverlay() {
-    showOverlay.value = false
-  }
-
   function trackEvent(name: string) {
     if (import.meta.client && typeof window !== 'undefined' && (window as any).umami) {
       try {
@@ -59,7 +55,6 @@ export function useDisplay() {
     enterDisplayMode,
     exitDisplayMode,
     toggleOverlay,
-    hideOverlay,
     trackEvent,
   }
 }

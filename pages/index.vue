@@ -405,8 +405,7 @@ onMounted(() => {
   // Listen for fullscreen exit (e.g. hardware back button)
   document.addEventListener('fullscreenchange', () => {
     if (!document.fullscreenElement && isDisplayMode.value) {
-      isDisplayMode.value = false
-      showOverlay.value = false
+      exitDisplayMode()
     }
   })
 
